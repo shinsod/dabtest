@@ -1,0 +1,89 @@
+.carousel{
+    position: relative;
+        width: 866px;
+        height: 775px;
+        img{
+            width: 104%;
+            height: 108%;
+            object-fit: contain;
+        }
+    &__info{
+        position: absolute;
+        bottom: 101px;
+        right: 51px;
+        display: grid;
+        grid-template:minmax(41px, auto) / 318px 200px;
+        column-gap: 140px;
+        grid-auto-rows:minmax(41px, auto) ;
+        justify-content: space-between;
+
+    }
+    &__model{
+        display: grid;
+        grid-row: repeat(2,minmax(41px, auto));
+        grid-auto-rows:minmax(41px, auto) ;
+        row-gap: 10px;
+        &-title{
+            font-size: 30px;
+            font-weight: 500;
+            color: #ffffff;
+        }
+        &-descr{
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.63;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+    &__price{
+        display: grid;
+        grid-row: repeat(2,minmax(41px, auto));
+        grid-auto-rows:minmax(41px, auto) ;
+        row-gap: 10px;
+        text-align: end;
+        &-cost{
+            font-size: 30px;
+            font-weight: bold;
+            color: #3e4fed;
+        }
+        &-time{
+            font-size: 16px;
+            font-weight: 500;
+            color: #fcd977;
+        }
+    }
+    &__service-wrapper{
+        .carousel{
+            height: 600px;
+            .slick-slide:active, .slick-slide:focus {
+              outline: none;
+            }
+        }   
+        .slick-prev, .slick-next{
+            z-index: 3;
+            position: absolute;
+            top: 293px;
+            left: 205px;
+            border: none;
+            background:none;
+            img{
+                width: 31px;
+                height: 23px;
+            }
+        }
+        .slick-prev{
+            right: 138px;
+            left: auto;
+        }
+                    
+
+    }
+    &__suggest{
+        height: 425px;
+        margin-top: 140px;
+        &-item{
+            height: 295px;
+            width: 360px;
+        }
+    }
+}

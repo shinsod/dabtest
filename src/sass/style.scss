@@ -1,0 +1,28 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'blocks/fonts';
+@import 'base/mixins';
+@import 'base/variables';
+@import 'libs/slick.scss';
+
+
+* {
+    font-family: 'Gilroy';
+    margin: 0;
+    padding: 0;
+}
+
+p,h1,h3,h2{
+    margin: 0;
+
+}
+
+.container{
+    width: 1530px;
+    margin: 0 auto;
+}
+
+@import 'blocks/buttons';
+@import 'blocks/promo';
+@import 'blocks/service';
+@import 'blocks/carousel';
+@import 'blocks/service';
