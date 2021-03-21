@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $('.promo__carousel').slick({
-    prevArrow:'<button type="button" class="slick-prev"> <img src="../icons/arrows/left.png" alt=""> </button>',
-    nextArrow: '<button type="button" class="slick-next"> <img src="../icons/arrows/left.png" alt=""> </button>', 
+    prevArrow:'<button type="button" class="slick-prev"> <img src="icons/arrows/right.png" alt=""> </button>',
+    nextArrow: '<button type="button" class="slick-next"> <img src="icons/arrows/left.png" alt=""> </button>', 
     dots: true,
     appendDots:$('.promo__counter')
   });
@@ -17,8 +17,8 @@ $('.promo__carousel').on('afterChange', function(event, slick, currentSlide, nex
 
 $(document).ready(function(){
   $('.carousel__service-wrapper').slick({
-    prevArrow:'<button type="button" class="slick-prev"> <img src="../icons/arrows/right.png" alt=""> </button>',
-    nextArrow: '<button type="button" class="slick-next"> <img src="../icons/arrows/left.png" alt=""> </button>', 
+    prevArrow:'<button type="button" class="slick-prev"> <img src="icons/arrows/right.png" alt=""> </button>',
+    nextArrow: '<button type="button" class="slick-next"> <img src="icons/arrows/left.png" alt=""> </button>', 
     infinite: true,
     speed: 500,
     fade: true,
@@ -31,8 +31,18 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $('.carousel__suggest').slick({
+    prevArrow:'<button type="button" class="slick-prev"> <img src="icons/arrows/left.png" alt=""> </button>',
+    nextArrow: '<button type="button" class="slick-next"> <img src="icons/arrows/right.png" alt=""> </button>',
     infinite: true,
-    slidesToShow: 3,
+    dots: true,
+    appendDots:$('.suggest__counter'),
+    slidesToShow: 4,
     slidesToScroll: 4
   });
+});
+
+$('.carousel__suggest').on('afterChange', function(event, slick, currentSlide, nextSlide){
+  let slide_num = currentSlide+1;
+  if (slide_num < 10) { slide_num = '0' + slide_num; }
+  $('.suggest__counter-current').text(slide_num);
 });
